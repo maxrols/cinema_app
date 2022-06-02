@@ -12,11 +12,6 @@ const search = () => {
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-<<<<<<< HEAD
-=======
-        filmList.textContent = '';
-        filmWeek.remove();
->>>>>>> 2955fab3c45c9906ecbb672a11cf6a3bbeb3e1b5
 
 
         if (!searchInput.value) return;
@@ -30,10 +25,7 @@ const search = () => {
             }
         })
         .then(() => {
-<<<<<<< HEAD
             filmWeek.style.display = 'none';
-=======
->>>>>>> 2955fab3c45c9906ecbb672a11cf6a3bbeb3e1b5
             title.textContent = "Результаты поиска";
         })
         .catch(err => {

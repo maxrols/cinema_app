@@ -6,17 +6,12 @@ const renderCards = async (data) => {
     listCard.textContent = '';
 
     Promise.all(data.map(async (item) => {
-<<<<<<< HEAD
         let key;
         if (item.name) {
             key = await getVideo(item.id, 'tv');
         } else {
             key = await getVideo(item.id, 'movie');
         }
-=======
-        const video = await getVideo(item.id, item.media_type);
-        const key = video.results[0]?.key;
->>>>>>> 2955fab3c45c9906ecbb672a11cf6a3bbeb3e1b5
 
 
         const card = document.createElement('li');
@@ -24,13 +19,9 @@ const renderCards = async (data) => {
 
         const link = document.createElement('a');
         link.classList.add('other-films__link');
-<<<<<<< HEAD
         if (key.results.length > 0) {
             link.href = `https://youtu.be/${key.results[0].key}`;
         }
-=======
-        if (key) link.href = `https://youtu.be/${key}`;
->>>>>>> 2955fab3c45c9906ecbb672a11cf6a3bbeb3e1b5
         link.dataset.rating = `${item.vote_average}`;
 
         const img = document.createElement('img');
@@ -42,13 +33,7 @@ const renderCards = async (data) => {
         card.append(link);
 
         return card;
-<<<<<<< HEAD
     })).then(cards => listCard.append(...cards)); 
-=======
-    })).then(cards => listCard.append(...cards));
-
-
->>>>>>> 2955fab3c45c9906ecbb672a11cf6a3bbeb3e1b5
 
     
 };

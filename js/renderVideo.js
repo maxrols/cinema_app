@@ -3,12 +3,8 @@ import renderCards from "./renderCards.js";
 
 const filmWeek = document.querySelector('.film-week');
 
-<<<<<<< HEAD
 const firstRender = (data, video) => {
     const key = video.results[0]?.key;
-=======
-const firstRender = (data, { key }) => {
->>>>>>> 2955fab3c45c9906ecbb672a11cf6a3bbeb3e1b5
     const {
         vote_average,
         backdrop_path,
@@ -41,15 +37,8 @@ const renderVideo = async () => {
     otherCards.length = 16;
 
     const video = await getVideo(firstCard.id, firstCard.media_type);
-<<<<<<< HEAD
 
     firstRender(firstCard, video);
-=======
-    console.log(firstCard);
-    console.log(video);
-
-    firstRender(firstCard, video.results[0]);
->>>>>>> 2955fab3c45c9906ecbb672a11cf6a3bbeb3e1b5
     renderCards(otherCards);
 };
 
