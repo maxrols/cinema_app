@@ -21,7 +21,7 @@ const firstRender = (data, video) => {
         </div>
         <h2 class="film-week__title">${title || name}</h2>
         ${key ? 
-            `<a class="film-week__watch-trailer tube" href="https://youtu.be/${key}" aria-label="смотреть трейлер"></a>` :
+            `<a class="film-week__watch-trailer tube" href="https://youtu.be/${key}" aria-label="смотреть трейлер" target="_blank"></a>` :
             ''    
         }
         

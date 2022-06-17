@@ -3,7 +3,6 @@ const BASE_URL = 'https://api.themoviedb.org/3/';
 const LANGUAGE = '&language=en-EN';
 
 
-// trending/all/day?api_key=
 
 const getData = async url => {
 

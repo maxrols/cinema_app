@@ -23,6 +23,7 @@ const renderCards = async (data) => {
             link.href = `https://youtu.be/${key.results[0].key}`;
         }
         link.dataset.rating = `${item.vote_average}`;
+        link.target = "_blank";
 
         const img = document.createElement('img');
         img.classList.add('other-films__img');
