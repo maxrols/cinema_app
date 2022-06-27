@@ -1,4 +1,5 @@
 import { getVideo } from "./services.js";
+import popup from "./popup.js";
 
 const listCard = document.querySelector('.other-films__list');
 
@@ -22,7 +23,7 @@ const renderCards = async (data) => {
         if (key.results.length > 0) {
             link.href = `https://youtu.be/${key.results[0].key}`;
         }
-        link.dataset.rating = `${item.vote_average}`;
+        link.dataset.rating = `${item.vote_average.toFixed(1)}`;
         link.target = "_blank";
 
         const img = document.createElement('img');
@@ -34,7 +35,10 @@ const renderCards = async (data) => {
         card.append(link);
 
         return card;
-    })).then(cards => listCard.append(...cards)); 
+    })).then(cards => listCard.append(...cards))
+    .then(() => {
+        popup();
+    }); 
 
     
 };
