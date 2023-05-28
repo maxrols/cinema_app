@@ -17,12 +17,12 @@ const firstRender = (data, video) => {
     filmWeek.innerHTML = `
     <div class="container film-week__container" data-rating="${vote_average.toFixed(1)}">
         <div class="film-week__poster-wrapper">
-            <img class="film-week__poster" src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${data.backdrop_path}" alt="постер ${data.title || data.name}">
+            <img class="film-week__poster" src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${data.backdrop_path}" alt="poster ${data.title || data.name}">
             <p class="film-week__title_origin">${original_title || original_name}</p>
         </div>
         <h2 class="film-week__title">${title || name}</h2>
         ${key ? 
-            `<a class="film-week__watch-trailer" href="https://youtu.be/${key}" aria-label="смотреть трейлер" target="_blank"></a>` :
+            `<a class="film-week__watch-trailer" href="https://youtu.be/${key}" aria-label="watch a trailer" target="_blank"></a>` :
             ''    
         }
         

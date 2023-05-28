@@ -28,7 +28,7 @@ const renderCards = async (data) => {
 
         const img = document.createElement('img');
         img.classList.add('other-films__img');
-        img.alt = `постер ${item.title ?? item.name}`;
+        img.alt = `poster ${item.title ?? item.name}`;
         img.src = `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${item.poster_path}`;
 
         link.append(img);

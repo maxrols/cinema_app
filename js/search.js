@@ -21,12 +21,12 @@ const search = () => {
             if (data.results.length) {
                 renderCards(data.results);
             } else {
-                throw 'По вашему запросу ничего не найдено';
+                throw 'Nothing is found';
             }
         })
         .then(() => {
             filmWeek.style.display = 'none';
-            title.textContent = "Результаты поиска";
+            title.textContent = "Results";
         })
         .catch(err => {
             title.textContent = err;
